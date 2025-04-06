@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Bebas_Neue';
+    src: url('../FONTS/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../FONTS/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+/* RSS */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.rss-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rss-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Outfit', sans-serif;
+}
+
+.rss-item h3 {
+    margin: 0 0 10px 0;
+    font-family: 'Bebas_Neue', sans-serif;
+    color: #bb2f2f;
+}
+
+.rss-item p {
+    margin: 10px 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.rss-item small {
+    display: block;
+    margin-top: 10px;
+    color: #666;
+    font-family: 'Outfit', sans-serif;
+}
+
+.rss-item a {
+    color: #bb2f2f;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+}
+
+.modo_oscuro img {
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+}
+
+.modo_oscuro {
+    background-color: transparent;
+    border: transparent;
+}

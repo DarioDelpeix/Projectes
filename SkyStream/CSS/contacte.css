@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Bebas_Neue';
+    src: url('../FONTS/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../FONTS/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas_Neue', sans-serif;
+}
+
+body, p, a, button, input, textarea, label {
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.logo {
+    padding: 1% 1%;
+    height: 100px;
+    width: 150px;
+    padding-right: 10%;
+}
+
+.navbar {
+    background-color: grey; 
+}
+
+.contact_form {	
+    width: 460px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    padding-left: 30px; 
+}
+
+input {
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: rgba(0, 0, 0, .75); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+textarea {
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: rgba(0, 0, 0, .75);
+}
+
+.enviar {
+    background-color: grey;
+    border: none;
+    padding: 10px 150px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.esborrar {
+    background-color: #dc3545;
+    border: none;
+	margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button p {
+    color: #fff; 
+}
+
+.aviso {
+    font-size: 13px;  
+}
+
+h1 {
+    font-size: 39px;  
+    text-align: left; 
+    padding-bottom: 20px; 
+}
+
+p {
+    font-size: 14px; 
+}
+
+.iframe {
+    width: 79%;
+    height: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.footer {
+    background-color: grey; 
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.footer-logo {
+    width: 10%;
+    height: 10%;
+    margin-bottom: 20px;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode label {
+    color: white !important;
+}

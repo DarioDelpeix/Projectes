@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'Bebas_Neue';
+    src: url('../FONTS/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../FONTS/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #000;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background: url("../IMG/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+nav {
+    position: fixed;
+    padding: 25px 60px;
+    z-index: 1;
+}
+
+nav a img {
+    width: 167px;
+}
+
+.form-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+}
+
+.form-wrapper h2 {
+    color: #fff;
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 36px;
+}
+
+.form-wrapper label {
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.form-wrapper button {
+    font-family: 'Outfit', sans-serif;
+}
+
+.form-wrapper p {
+    font-family: 'Outfit', sans-serif;
+}
+.form-wrapper form {
+    margin: 25px 0 65px;
+}
+.form-wrapper a {
+    font-family: 'Outfit', sans-serif;
+}
+form .form-control {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+.form-control input {
+    height: 100%;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+    font-family: 'Outfit', sans-serif;
+}
+
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    background: #e50914;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+form button:hover {
+    background: #c40812;
+}
+.form-wrapper a {
+    text-decoration: none;
+}
+.form-wrapper a:hover {
+    text-decoration: underline;
+}
+
+form .form-help {
+    display: flex;
+    justify-content: space-between;
+}
+form .remember-me {
+    display: flex;
+}
+form .remember-me input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+form .form-help :where(label, a) {
+    font-size: 0.9rem;
+}
+.form-wrapper p a {
+    color: #fff;
+}
+.form-wrapper small {
+    display: block;
+    margin-top: 15px;
+    color: #b3b3b3;
+}
+.form-wrapper small a {
+    color: #0071eb;
+}
+@media (max-width: 740px) {
+    body::before {
+        display: none;
+    }
+    nav, .form-wrapper {
+        padding: 20px;
+    }
+    nav a img {
+        width: 140px;
+    }
+    .form-wrapper {
+        width: 100%;
+        top: 43%;
+    }
+    .form-wrapper form {
+        margin: 25px 0 40px;
+    }
+}
+
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center; 
+    font-weight: 500;
+}
+
+.message.success {
+    color: #155724;
+    background-color: #d4edda; 
+    border: 1px solid #c3e6cb; 
+}
+
+.message.error {
+    color: #721c24; 
+    background-color: #f8d7da; 
+    border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 740px) {
+    .message {
+        font-size: 0.9rem;
+        padding: 10px; 
+    }
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-control input {
+    height: 50px;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #8c8c8c;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-control input:focus ~ label,
+.form-control input:not(:placeholder-shown) ~ label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+    color: #fff;
+}
+
+.form-control input:placeholder-shown ~ label {
+    font-size: 1rem;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+}
+
+.form-wrapper p {
+    color: #8c8c8c;
+}
+
+.form-wrapper p a {
+    color: #fff;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <channel>
+    <title>Noticies de SKYSTREAM</title>
+    <description>Últimes actualitzacions de SKYSTREAM</description>
+    <language>ca-es</language>
+    <lastBuildDate>dilluns, 20 oct. 2023 13:00</lastBuildDate>
+    <item>
+      <title>Joker</title>
+      <link>http://joker.pelicula.com</link>
+      <description>La nueva peli "Joker: Folie à Deux" trata de Arthur Fleck en el Hospital Arkham, donde conoce a Harleen Quinzel. Es una mezcla de drama, romance y música que muestra cómo están sus mentes.</description>
+      <pubDate>dimarts, 20 gen. 2025 13:00</pubDate>
+    </item>
+    <item>
+      <title>Batman Beyond: Return of the Joker</title>
+      <link>http://batman.pelicula.com</link>
+      <description>El jove protegit d'un dels superherois més grans del món ha d'assumir noves responsabilitats i lluitar contra un vell enemic del seu cap, el Joker, que torna a la ciutat de Gotham més enfadat que mai.</description>
+      <pubDate>divendres, 20 gen. 2025 13:00</pubDate>
+    </item>
+    <item>
+      <title>Avengers: End Game</title>
+      <link>http://endgame.pelicula.com</link>
+      <description>Després dels esdeveniments devastadors de "Avengers: Infinity War", l'univers està en ruïnes a causa de les accions de Thanos, el Titan Boig. Amb l'ajuda dels aliats que van quedar, els Venjadors s'hauran de reunir una vegada més per intentar aturar-lo i restaurar l'ordre a l'univers d'una vegada per totes.</description>
+      <pubDate>dissabte, 20 gen. 2025 13:00</pubDate>
+    </item>
+  </channel>
+</rss>
