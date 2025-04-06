@@ -1,0 +1,284 @@
+/* Fondo global: agrega aquí la URL de tu imagen de fondo */
+body {
+  background-image: url('https://wallpapers.com/images/hd/pokemon-background-62qw0ci6w62biktf.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Contenedor principal con fondo semitransparente */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Sección de configuración de jugadores con fondo semitransparente */
+.setup-container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  background-color: rgba(249, 249, 249, 0.8);
+  border: 2px solid rgba(221, 221, 221, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Estilos de textos e inputs mantienen sus características originales */
+.setup-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.setup-instructions {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.player-input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.player-label {
+  display: block;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.player-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.player-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.setup-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.setup-button:hover {
+  background-color: #0056b3;
+}
+
+.setup-button:active {
+  background-color: #004085;
+}
+
+/* Interruptor de dos jugadores */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Sección de selección de equipos */
+#pokemon-grid,
+#selected-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-card {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 100%;
+  max-width: 150px;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 2px solid #4a90e2;
+}
+
+.pokemon-card h3 {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.pokemon-card p {
+  margin: 2px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.pokemon-card.selected {
+  border: 2px solid green;
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+/* Sección de batalla con fondo semitransparente */
+#battle-section {
+  padding: 20px;
+  background-color: rgba(240, 248, 255, 0.8);
+  border: 2px solid rgba(204, 204, 204, 0.8);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Configuración del layout en la sección de batalla:
+   - Los dos equipos se muestran en bloques verticales (uno debajo del otro)
+   - Dentro de cada equipo, los Pokémon se organizan horizontalmente */
+#battle-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Cada contenedor de equipo en la batalla */
+#player1-battle, 
+#player2-battle { /* o #f3a7a7 para el segundo, según corresponda */
+  width: 90%;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Los nombres de los jugadores en la batalla */
+#battle-display h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Organiza las cartas de Pokémon de cada equipo en forma horizontal */
+#player1-pokemons,
+#player2-pokemons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Estilos para las cartas de Pokémon en el equipo de batalla */
+.team-pokemon-card {
+  text-align: center;
+  border: 1px solid rgba(74, 144, 226, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  background-color: rgba(240, 248, 255, 0.9);
+}
+
+.team-pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 2px solid #4a90e2;
+}
+
+/* Botón de ataque */
+#attack-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#attack-button:hover {
+  background-color: #cc0000;
+}
+
+#attack-button:active {
+  background-color: #990000;
+}
+
+/* Ajusta el log de batalla si es necesario */
+#battle-log {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1em;
+  color: #333;
+}

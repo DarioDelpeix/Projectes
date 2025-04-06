@@ -1,0 +1,122 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./estil.css" />
+      <title>Pokémon Team Builder</title>
+    </head>
+    <body>
+      <header>
+        <h1>Pokémon Team Builder</h1>
+      </header>
+      <main>
+        <!-- Player Setup Section -->
+        <section id="player-setup-section" class="setup-container">
+          <h2 class="setup-title">Player Setup</h2>
+          <p class="setup-instructions">Enter player names to begin the game.</p>
+          
+          <!-- Toggle Switch: Two Players (on) / One Player vs CPU (off) -->
+          <div class="toggle-container">
+            <label for="two-players-toggle">Two Players:</label>
+            <label class="switch">
+              <input type="checkbox" id="two-players-toggle" checked />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          
+          <div class="player-input-group">
+            <label for="player1-name" class="player-label">Player 1 Name:</label>
+            <input type="text" id="player1-name" class="player-input" required />
+          </div>
+          
+        <!-- Wrap Player 2 input in a container to hide/show it -->
+        <div class="player-input-group" id="player2-container">
+            <label for="player2-name" class="player-label">Player 2 Name:</label>
+            <input type="text" id="player2-name" class="player-input" required />
+          </div>
+          
+          <button id="start-team-selection-button" class="setup-button">Next</button>
+        </section>
+
+        <!-- Team Selection Section -->
+        <section id="team-selection-section" style="display: none">
+          <h2 id="current-player-selection"></h2>
+          <p id="remaining-credits">Créditos restantes: 200</p>
+          <div id="selected-team-grid"></div>
+          
+          <!-- Botón "Next Player" -->
+          <button id="next-player-button" class="setup-button" style="display: none;">Next Player</button>
+          
+          <!-- Sort Options Section -->
+          <div id="sort-options-section" style="display: none">
+            <h2>Sort Options</h2>
+            <form id="sort-options-form">
+              <fieldset>
+                <legend>Sort by:</legend>
+                <label>
+                  <input type="radio" name="sort-criteria" value="name" checked />
+                  Name
+                </label>
+                <label>
+                  <input type="radio" name="sort-criteria" value="points" />
+                  Points
+                </label>
+                <label>
+                  <input type="radio" name="sort-criteria" value="type" />
+                  Type
+                </label>
+              </fieldset>
+              <fieldset>
+                <legend>Sort method:</legend>
+                <label>
+                  <input type="radio" name="sort-method" value="bubble" checked />
+                  Bubble
+                </label>
+                <label>
+                  <input type="radio" name="sort-method" value="insertion" />
+                  Insertion
+                </label>
+                <label>
+                  <input type="radio" name="sort-method" value="selection" />
+                  Selection
+                </label>
+              </fieldset>
+              <button type="button" class="setup-button" id="sort-team">Sort</button>
+            </form>
+          </div>
+
+      <!-- Pokémon Grid Section -->
+      <div id="pokemon-grid" class="grid-container"></div>
+        </section>
+
+      <!-- Battle Section -->
+      <section id="battle-section" style="display: none">
+          <h2>Batalla</h2>
+          <div id="battle-display" style="display: flex; justify-content: space-around; align-items: center;">
+          <!-- Equipo del Jugador 1 -->
+            <div id="player1-battle" style=" width: 30%; padding: 1rem;">
+              <h3 id="player1-name-battle"></h3>
+            <div id="player1-pokemons"></div>
+          </div>
+        
+          <div style="font-size: 2rem; font-weight: bold;">VS</div>
+        
+          <!-- Equipo del Jugador 2 -->
+          <div id="player2-battle" style=" width: 30%; padding: 1rem;">
+            <h3 id="player2-name-battle"></h3>
+          <div id="player2-pokemons"></div>
+          </div>
+        </div>
+    
+        <p id="current-turn-display"></p>
+      
+        <!-- Botón para ejecutar el siguiente turno de la batalla -->
+          <button id="attack-button">Atacar</button>
+          <div id="battle-log"></div>
+        </section>
+        
+      </main>
+      <script type="module" src="./main.js"></script>
+    </body>
+  </html>
